@@ -10,7 +10,7 @@ export interface AuthifyClientDoc {
   ): Promise<boolean>;
 }
 
-export default class Authify implements AuthifyClientDoc {
+export class AuthifyClient implements AuthifyClientDoc {
   public readonly config: AuthifyConfigDoc;
   private apiClient;
 
@@ -33,8 +33,12 @@ export default class Authify implements AuthifyClientDoc {
       const response = await this.apiClient.post("/check", {
         user,
         resourceAction,
-        tenant: options.tenant || this.config.defaultTenant,
+        tenant: options?.tenant ?? this.config.defaultTenant,
       });
+
+      if (response.status !== 200) {
+        return false;
+      }
 
       return response.data.result;
     } catch (error) {
