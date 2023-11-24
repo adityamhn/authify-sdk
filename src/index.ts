@@ -34,7 +34,7 @@ export class AuthifyClient implements AuthifyClientDoc {
         user,
         resourceAction,
         tenant: options?.tenant ?? this.config.defaultTenant,
-        metadata: options.metadata,
+        metadata: options?.metadata,
       });
 
       if (response.status !== 200) {
