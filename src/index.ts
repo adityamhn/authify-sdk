@@ -27,13 +27,14 @@ export class AuthifyClient implements AuthifyClientDoc {
   public async check(
     user: string,
     resourceAction: string,
-    options: { tenant?: string }
+    options: { tenant?: string; metadata?: Record<string, string> }
   ): Promise<boolean> {
     try {
       const response = await this.apiClient.post("/check", {
         user,
         resourceAction,
         tenant: options?.tenant ?? this.config.defaultTenant,
+        metadata: options.metadata,
       });
 
       if (response.status !== 200) {
