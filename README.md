@@ -53,8 +53,8 @@ if (allowed) {
 }
 ```
 
-## Contributing to Authify
-Contributions from the community are welcome to enhance the Authify SDK.
+### Contributing to Authify
+We welcome contributions from the community! If you want to contribute through code or documentation, the [Contributing guide](https://github.com/adityamhn/authify/blob/main/CONTRIBUTING.md) is the best place to start. If you have questions, feel free to ask.
 
 ## License
 Authify is open-sourced under the [MIT License](https://choosealicense.com/licenses/mit/). For more details, refer to our [LICENSE](https://raw.githubusercontent.com/adityamhn/authify/main/LICENSE) file.
