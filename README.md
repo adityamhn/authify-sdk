@@ -1,5 +1,7 @@
 # Authify SDK for Node.js Documentation
 
+![Authify logo](https://i.postimg.cc/9FXtgQ4B/authify-full.png)
+
 ## Overview
 
 Authify SDK provides a Node.js client for integrating Role-Based Access Control (RBAC) services offered by Authify. It's designed to streamline the implementation of access control in Node.js applications.
